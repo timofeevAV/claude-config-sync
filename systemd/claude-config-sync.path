@@ -1,0 +1,12 @@
+[Unit]
+Description=Watch Claude Code config for changes
+
+[Path]
+PathChanged=%h/.claude/settings.json
+PathChanged=%h/.claude/skills
+PathChanged=%h/.claude/agents
+PathChanged=%h/.claude/commands
+PathChanged=%h/.claude/hooks
+
+[Install]
+WantedBy=paths.target

@@ -1,0 +1,42 @@
+# Conversation history and session data
+history.jsonl
+projects/
+session-env/
+plans/
+
+# Debug and diagnostics
+debug/
+
+# Caches
+cache/
+paste-cache/
+image-cache/
+stats-cache.json
+statsig/
+
+# Telemetry
+telemetry/
+
+# File tracking
+file-history/
+shell-snapshots/
+
+# Tasks and todos (ephemeral per-session)
+tasks/
+todos/
+
+# IDE integration state
+ide/
+
+# Browser and downloads
+chrome/
+downloads/
+
+# Plugins (managed externally)
+plugins/
+
+# macOS
+.DS_Store
+
+# Auto-sync logs
+scripts/sync.log

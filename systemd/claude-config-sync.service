@@ -1,0 +1,10 @@
+[Unit]
+Description=Claude Code config bidirectional sync
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/.claude/scripts/auto-sync.sh
+Environment=HOME=%h
+Environment=PATH=/usr/local/bin:/usr/bin:/bin

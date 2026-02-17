@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.claude.config-sync</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>__HOME__/.claude/scripts/auto-sync.sh</string>
+    </array>
+
+    <key>WatchPaths</key>
+    <array>
+        <string>__HOME__/.claude/settings.json</string>
+        <string>__HOME__/.claude/skills</string>
+        <string>__HOME__/.claude/agents</string>
+        <string>__HOME__/.claude/commands</string>
+        <string>__HOME__/.claude/hooks</string>
+    </array>
+
+    <key>StartInterval</key>
+    <integer>14400</integer>
+
+    <key>StandardOutPath</key>
+    <string>/tmp/claude-config-sync.out</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/claude-config-sync.err</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin</string>
+        <key>HOME</key>
+        <string>__HOME__</string>
+    </dict>
+</dict>
+</plist>
