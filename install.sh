@@ -34,14 +34,14 @@ fi
 # Handle existing ~/.claude
 if [ -d "$TARGET" ]; then
     if [ -d "$TARGET/.git" ]; then
-        info "~/.claude is already a git repo — pulling latest changes"
+        info "$HOME/.claude is already a git repo — pulling latest changes"
         cd "$TARGET"
         git -c commit.gpgSign=false pull --recurse-submodules
         git submodule update --init --recursive
         info "Config is up to date."
     else
         BACKUP="$TARGET.backup.$(date +%Y%m%d%H%M%S)"
-        warn "~/.claude exists but is not a repo"
+        warn "$HOME/.claude exists but is not a repo"
         warn "Backing up to $BACKUP"
         mv "$TARGET" "$BACKUP"
         chmod 700 "$BACKUP"
